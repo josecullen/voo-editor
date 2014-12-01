@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="VooEditor" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>		
+		<class>model.ManoDeObra</class>
+		<class>model.Maquina</class>
+		<class>model.Material</class>
+		<class>model.Prenda</class>
+		<class>model.PrendaManoDeObra</class>
+		<class>model.PrendaMaquina</class>
+		<class>model.PrendaMaterial</class>
+		<class>model.Talle</class>
+		<class>model.TipoPrenda</class>
+		<properties>
+			<property name="eclipselink.target-server" value="None"/>
+			<property name="eclipselink.jdbc.batch-writing" value="Oracle-JDBC"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+			<property name="javax.persistence.jdbc.user" value="voo"/>
+			<property name="javax.persistence.jdbc.password" value="voo"/>
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+		</properties>
+	</persistence-unit>
+</persistence>
