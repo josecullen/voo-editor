@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+<?import controller.components.ListEntityPanelController?>
+
+<fx:root dividerPositions="0.3" type="SplitPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <TitledPane animated="false" collapsible="false" text="Lista" HBox.hgrow="ALWAYS">
+      	<content>
+      		<ListEntityPanelController fx:id="listEntityPanel"></ListEntityPanelController>
+      	</content>
+      </TitledPane>
+      <TitledPane fx:id="titledEditorPane" animated="false" collapsible="false" text="(ningún elemento seleccionado)" prefHeight="10000" HBox.hgrow="ALWAYS" />
+   </items>
+</fx:root>
