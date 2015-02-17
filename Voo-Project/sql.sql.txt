@@ -1,0 +1,20 @@
+delete from mano_de_obra;
+delete from maquina;
+delete from prendas;
+delete from prenda_mano_de_obra;
+delete from prenda_maquina;
+delete from prenda_tela;
+delete from talle;
+delete from tela;
+delete from tipo_prenda;
+delete from valores_por_defecto;
+delete from ventas;
+delete from venta_prenda;
+
+
+update sqlite_sequence set seq = 1;
+
+insert into tipo_prenda(tipo_prenda_id, nombre) values (1, "tipo prenda prueba");
+insert into prendas (prenda_id, nombre, tipo_prenda_id ) values (1,"prenda prueba", 1);
+insert into mano_de_obra (mano_de_obra_id, nombre, costo_hora) values (1, "mdo prueba", 20);
+insert into prenda_mano_de_obra (prenda_mdo_id, prenda_id, mano_de_obra_id, cantidad_horas) values (1,1,1, 3);

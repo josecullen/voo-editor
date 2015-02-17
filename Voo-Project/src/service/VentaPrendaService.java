@@ -28,27 +28,27 @@ public class VentaPrendaService {
 	
 	public void removeByJoins(Venta venta, Prenda prenda){
 		VentaPrenda ventaPrenda = findByJoins(venta, prenda);
-		venta.removeVentaPrenda(ventaPrenda);
+//		venta.removeVentaPrenda(ventaPrenda);
 		em.remove(ventaPrenda);
 	}
 	
-	public VentaPrenda setCantidad(VentaPrenda ventaPrenda, int cantidad){
-		VentaPrenda vp = em.find(VentaPrenda.class, ventaPrenda.getId());
-		vp.setCantidad(cantidad);
-		return vp;
-	}
+//	public VentaPrenda setCantidad(VentaPrenda ventaPrenda, int cantidad){
+//		VentaPrenda vp = em.find(VentaPrenda.class, ventaPrenda.getId());
+//		vp.setCantidad(cantidad);
+//		return vp;
+//	}
 	
-	public VentaPrenda setBeneficio(VentaPrenda ventaPrenda, int beneficio){
-		VentaPrenda vp = em.find(VentaPrenda.class, ventaPrenda.getId());
-		vp.setBeneficio(beneficio);
-		return vp;
-	}
+//	public VentaPrenda setBeneficio(VentaPrenda ventaPrenda, int beneficio){
+//		VentaPrenda vp = em.find(VentaPrenda.class, ventaPrenda.getId());
+//		vp.setBeneficio(beneficio);
+//		return vp;
+//	}
 	
 	public VentaPrenda create(Venta venta, Prenda prenda){
 		VentaPrenda ventaPrenda = new VentaPrenda();
-		ventaPrenda.setPrenda(prenda);
-		ventaPrenda.setVenta(venta);
-		venta.addVentaPrenda(ventaPrenda);
+//		ventaPrenda.setPrenda(prenda);
+//		ventaPrenda.setVenta(venta);
+//		venta.addVentaPrenda(ventaPrenda);
 		em.persist(ventaPrenda);
 		return ventaPrenda;
 	}

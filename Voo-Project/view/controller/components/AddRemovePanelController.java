@@ -22,6 +22,7 @@ public class AddRemovePanelController<E> extends AnchorPane{
         fxmlLoader.setController(this);
         fxmlLoader.load();
         
+        // Habilita o deshabilita el Botón Add según haya algo escrito en el TextField.
         final InvalidationListener controlIsEmpty = observable ->{
         	if(txtNewEntity.getText().length() == 0)
         		btnAddEntity.setDisable(true);
@@ -33,9 +34,6 @@ public class AddRemovePanelController<E> extends AnchorPane{
         controlIsEmpty.invalidated(null);
        
 	}
-	
-
-	
 	
 	public String getText(){
 		return txtNewEntity.getText();

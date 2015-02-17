@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import controller.components.AddRemoveComboController?>
+
+<fx:root fx:id="vbox" type="VBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<TableView fx:id="maquinaTable" editable="true" prefHeight="175.0"
+			prefWidth="381.0" VBox.vgrow="ALWAYS">
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+			<columns>
+				<TableColumn fx:id="maquinaNombreColumn" editable="false" prefWidth="75.0" text="Máquina" />
+				<TableColumn fx:id="maquinaCostoHoraColumn" editable="false" prefWidth="75.0" text="Costo/hora" />
+				<TableColumn fx:id="maquinaCantidadMinutosColumn" editable="true" prefWidth="75.0" text="Cantidad/minutos" />
+				<TableColumn fx:id="maquinaValorColumn" editable="false" prefWidth="75.0" text="Valor" />
+			</columns>
+		</TableView>
+		<AddRemoveComboController fx:id="addRemoveCombo" />
+	</children>
+</fx:root>

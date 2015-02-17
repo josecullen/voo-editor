@@ -8,7 +8,7 @@ import model.ManoDeObra;
 import model.Maquina;
 import model.Prenda;
 
-public class PrendaService {
+public class PrendaService implements BasicServices<Prenda>{
 	EntityManager em;
 	PrendaTelaService prendaTelaService;
 	

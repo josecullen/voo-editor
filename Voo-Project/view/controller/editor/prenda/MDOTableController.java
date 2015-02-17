@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import main.Main;
 import model.ManoDeObra;
@@ -38,7 +39,13 @@ public class MDOTableController extends VBox {
         
         this.prenda = prenda;
         
-        mdoTable.setItems(prenda.prendaManoDeObrasProperty());
+      //  mdoTable.setItems(prenda.prendaManoDeObrasProperty());
+        
+        mdoTable.setItems(new ObservableListWrapper<PrendaManoDeObra>(prenda.getPrendaManoDeObras()));
+        mdoNombreColumn.setCellValueFactory(new PropertyValueFactory<PrendaManoDeObra, String>("nombre"));        
+        mdoCantidadHorasColumn.setCellValueFactory(new PropertyValueFactory<PrendaManoDeObra, Double>("cantidadHoras"));
+        mdoCostoHoraColumn.setCellValueFactory(new PropertyValueFactory<PrendaManoDeObra, Double>("costoHora"));
+        
         
         addRemoveCombo.setList(new ObservableListWrapper<ManoDeObra>(MDOService.findAll()));
         addRemoveCombo.btnAddEntity.setOnAction(value ->{

@@ -21,10 +21,9 @@ public class EntityEditorController<E> extends SplitPane {
 		fxmlLoader.setController(this);
 		fxmlLoader.load();
 		
+		// Cuando se hace clic en un item de la lista, se despliega el editor correspondiente.		
 		listEntityPanel.listEntity.setOnMouseClicked(value -> {
-			E e = listEntityPanel.listEntity.getSelectionModel().getSelectedItem();
-			titledEditorPane.setContent(EditorFactory.getEditor(e));
-			titledEditorPane.setText(e.toString());
+			setEditor();
 		});
 		
 	}
@@ -33,6 +32,11 @@ public class EntityEditorController<E> extends SplitPane {
 		return listEntityPanel;
 	}
 	
+	public void setEditor(){
+		E e = listEntityPanel.listEntity.getSelectionModel().getSelectedItem();
+		titledEditorPane.setContent(EditorFactory.getEditor(e));
+		titledEditorPane.setText(e.toString());
+	}
 	
 	
 }

@@ -13,7 +13,6 @@
         <tabs>
           <Tab fx:id="tabPrendas" text="Prendas">
             <content>
-<!--               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" /> -->
 				<EntityEditorController fx:id="editorPrendas"></EntityEditorController>
             </content>
           </Tab>
@@ -29,7 +28,7 @@
             </Tab>
             <Tab text="Mano de Obra">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+				<EntityEditorController fx:id="editorMDO"></EntityEditorController>
                </content>
             </Tab>
             <Tab text="Máquinas">

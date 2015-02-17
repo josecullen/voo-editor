@@ -22,8 +22,7 @@ public class Main extends Application {
 		
 		PrincipalController principal = new PrincipalController();
 		
-		Scene scene = new Scene(principal);
-		
+		Scene scene = new Scene(principal);		
 		
 		scene.setFill(Color.TRANSPARENT);
 

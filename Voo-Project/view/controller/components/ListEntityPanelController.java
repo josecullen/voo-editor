@@ -22,6 +22,7 @@ public class ListEntityPanelController<E> extends VBox{
         fxmlLoader.setController(this);
         fxmlLoader.load();
         
+        // Habilita y deshabilita los botones según haya algo seleccionado en la lista.
         InvalidationListener controlIsSelected = observable -> {
         	if(listEntity.selectionModelProperty().get().getSelectedItem() == null){
         		addRemovePanel.btnRemoveEntity.setDisable(true);

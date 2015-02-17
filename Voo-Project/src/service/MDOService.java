@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 
 import model.ManoDeObra;
 
-public class MDOService {
+public class MDOService implements BasicServices<ManoDeObra>{
 	EntityManager em;
 	
 	public MDOService(EntityManager em) {
